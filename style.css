@@ -45,6 +45,10 @@ li {
   --heading-color: #000a19;
   --supporting-color: #ebf3fe;
   --para-color: #504e4d;
+  --h-color: #0a043c;
+  --white-color: #ffffff;
+  --btn-hover-bg-color: #033b99;
+  --btn-box-shadow: rgba(100,100,111,0.2)0px 7px 29px 0px;
 }
 
 .container {
@@ -97,3 +101,34 @@ li {
 
 /**hero section**/
 
+.grid {
+  display: grid;
+}
+
+.grid-two--cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.btn{
+    display: inline-block;
+    padding: 2px 4px;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-radius: 0.6rem;
+}
+
+.btn:hover{
+    background-color: var(--btn-hover-bg-color);
+    cursor: pointer;
+    box-shadow: var(--btn-box-shadow);
+}
+
+main{
+    background-image: linear-gradient(
+        to top right,
+        #3d86fa,
+        #4484fb,
+        #b3d2ff,
+        #ebf3fe
+    );
+}
