@@ -9,6 +9,8 @@ html {
   font-size: 62.5%;
 }
 
+/**nav bar**/
+
 h1,
 h2,
 h3,
@@ -92,3 +94,6 @@ li {
     width: 100%;
   }
 }
+
+/**hero section**/
+
