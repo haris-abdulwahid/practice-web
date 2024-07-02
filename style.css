@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Georgia, "Times New Roman", Times, serif;
+  ::selection{
+    background-color: #3FA2F6;
+  }
 }
 
 html {
@@ -38,6 +41,12 @@ li {
   list-style: none;
 }
 
+.navbar-brand{
+  width: 80px;
+  margin-top: 10px;
+  aspect-ratio: 1;
+}
+
 :root {
   --main-color: #0062ff;
   --bg-color: #ffffff;
@@ -58,7 +67,7 @@ li {
 }
 
 .section-navbar {
-  width: 100%;
+  /* width: 100%; */
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
@@ -131,4 +140,24 @@ main{
         #b3d2ff,
         #ebf3fe
     );
+}
+
+.section-hero--image img{
+  width: 100%;
+  height: auto;
+  transform: scaleX(-1);
+}
+
+.section-hero .grid{
+  align-items: center;
+  gap: 6.4rem;
+
+  & .hero-subheading{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 1.7rem;
+    word-spacing: 0.2rem;
+    color: var(--btn-hover-bg-color);
+  }
+
 }
