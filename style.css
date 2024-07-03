@@ -204,5 +204,46 @@ main{
 
 /**end shape divider**/
 
-/**about**/
+/**about section**/
 
+.section-common-heading{
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.section-common-subheading{
+  color: var(--heading-color);
+}
+
+.section-about img{
+   padding: 2.54rem;
+   background-color: var(--supporting-color);
+   width: 15rem;
+   height: auto;
+   border-radius: 50%;
+   transition: all 0.3s linear;
+}
+
+.section-about .about-div{
+  text-align: center;
+}
+
+.section-common--title{
+  font-size: 2rem;
+  margin: 2.4rem 0 1.2rem 0; 
+}
+
+.grid-three--cols{
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6.4rem;
+}
+
+.section-about .grid{
+  gap: 6.4rem;
+}
+
+.section-about .icon:hover > img{
+      transform: rotate(360deg);
+      background:linear-gradient(to right,#0575e6, #021b79)
+}
