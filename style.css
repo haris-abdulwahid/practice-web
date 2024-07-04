@@ -349,5 +349,9 @@ main{
 }
 
 .section-why-choose .grid{
-  
+  gap: 9.6rem; 
+}
+
+.why-choose--div{
+  margin-top: 3.2rem;
 }
