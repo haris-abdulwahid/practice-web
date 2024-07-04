@@ -62,9 +62,9 @@ li {
 }
 
 .container {
-  max-width: 102rem;
+  max-width: 142rem;
   margin: 0 auto;
-  padding: 9.6rem 2.4rem;
+  padding: 9.6rem 4.4rem;
 }
 
 .section-navbar {
@@ -279,7 +279,7 @@ main{
 }
 
 .section-courses .courses-div{
-  padding: 1rem;
+  padding: 3rem;
 }
 
 .courses-div:nth-child(2) .icon .fa-brands{
@@ -318,3 +318,36 @@ main{
 
 /**why choose section**/
 
+.section-why-choose{
+
+}
+
+.common-text--highlight{
+   width: 6rem;
+   aspect-ratio: 1;
+   background-color: var(--supporting-color);
+   color: var(--main-color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 2.4rem;
+   font-weight: 700;
+   border-radius: 50%;
+}
+
+.section-why-choose .text-align--right .why-choose--div{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  text-align: right;
+}
+
+.choose-center--div img{
+  width: 90%;
+  height: auto;
+}
+
+.section-why-choose .grid{
+  
+}
