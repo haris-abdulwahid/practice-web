@@ -559,6 +559,10 @@ input,textarea{
   padding-top: 0;
 }
 
+input:focus-visible , textarea:focus-visible{
+  outline: 0.1rem solid var(--main-color);
+}
+
 /**footer section**/
 
 footer {
@@ -608,3 +612,24 @@ footer * {
 footer .grid {
   text-align: right;
 }
+
+/**scroll bar section**/
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-track{
+  background-color: var(--supporting-color);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: var(--main-color);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: var(--heading-color);
+}
+
