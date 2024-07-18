@@ -10,6 +10,11 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
 }
 
 /**nav bar**/
@@ -197,7 +202,7 @@ main {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 150px;
+  height: 120px;
 }
 
 .custom-shape-divider-bottom-1719916076 .shape-fill {
@@ -338,7 +343,7 @@ main {
   flex-direction: column;
   justify-content: start;
   align-items: end;
-  text-align: right;
+  text-align: start;
 }
 
 .choose-center--div img {
@@ -415,19 +420,19 @@ figure {
 .section-blog {
   background-color: var(--bg-color);
 
-  & .grid{
+  & .grid {
     gap: 6.4rem;
   }
 
-  & .blog{
+  & .blog {
     box-shadow: var(--btn-box-shadow);
     transition: scale 0.3s linear;
 
-    &:hover{
+    &:hover {
       scale: 1.1;
     }
 
-    & .blog-content{
+    & .blog-content {
       padding: 1.4rem 2.4rem 2.4rem;
     }
   }
@@ -443,21 +448,18 @@ figure {
     justify-content: space-between;
     margin-top: 1.6rem;
     font-size: 1.4rem;
-   
 
-
-  & .hello{
-    background-color: transparent;
-    padding: 0;
-    margin-right: 0.5rem;
+    & .hello {
+      background-color: transparent;
+      padding: 0;
+      margin-right: 0.5rem;
+    }
   }
-}
 
-& .section-common-title{
-  margin-top: 0.8rem;
-  font-size: 2rem;
-}
-
+  & .section-common-title {
+    margin-top: 0.8rem;
+    font-size: 2rem;
+  }
 }
 
 /**contact home section**/
@@ -507,8 +509,16 @@ figure {
   text-transform: capitalize;
 }
 
-:is(.section-about,.section-blog,.section-courses,.section-contact,.section-why-choose,.section-contact-homepage) .container:first-child{
-  padding: 6.4rem 0 2.4rem 0;
+:is(
+    .section-about,
+    .section-blog,
+    .section-courses,
+    .section-contact,
+    .section-why-choose,
+    .section-contact-homepage
+  )
+  .container:first-child {
+  padding: 6.4rem 2.4rem 2.4rem 2.4rem;
 }
 
 .section-courses {
@@ -517,49 +527,51 @@ figure {
 
 /**contact section**/
 
-.mb-3{
+.mb-3 {
   margin-bottom: 3.2rem;
 }
 
-label{
+label {
   display: block;
   text-transform: capitalize;
 }
 
-input,textarea{
+input,
+textarea {
   width: 100%;
   padding: 1.2rem 2.4rem;
   font-size: 1.7rem;
   letter-spacing: 0.1rem;
 }
 
-.section-contact{
-  & .grid{
+.section-contact {
+  & .grid {
     gap: 6.4rem;
     align-items: center;
   }
 }
 
-.contact-content .grid{
+.contact-content .grid {
   gap: 6.4rem;
 }
 
-::placeholder{
+::placeholder {
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
 }
 
-.btn-submit{
+.btn-submit {
   font-size: 1.8rem;
   border: none;
   text-transform: capitalize;
 }
 
-.top{
+.top {
   padding-top: 0;
 }
 
-input:focus-visible , textarea:focus-visible{
+input:focus-visible,
+textarea:focus-visible {
   outline: 0.1rem solid var(--main-color);
 }
 
@@ -615,21 +627,198 @@ footer .grid {
 
 /**scroll bar section**/
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 10px;
 }
 
-
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
   background-color: var(--supporting-color);
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
   border-radius: 50px;
 }
 
-::-webkit-scrollbar-thumb:hover{
+::-webkit-scrollbar-thumb:hover {
   background-color: var(--heading-color);
 }
 
+/**media queries section**/
+
+@media (width <= 1400px) {
+  Html {
+    font-size: 56.25%;
+  }
+
+  .section-hero img {
+    width: 90%;
+  }
+}
+
+@media (width <= 1220px) {
+  Html {
+    font-size: 54%;
+  }
+
+:is(
+  .section-about,
+  .section-blog,
+  .section-courses,
+  .section-contact-homepage,
+  .section-why-choose
+)
+
+.grid{
+  gap: 1.4rem;
+}
+
+} 
+
+
+
+
+@media (width <= 768px) {
+  .grid-two--cols,
+  .grid-three--cols {
+    grid-template-columns: 1fr;
+  }
+
+  .section-navbar .container {
+    display: flex;
+    flex-direction: column;
+
+    & .navbar-ul{
+       gap: 2.4rem;
+    }
+
+    & .navbar-brand {
+      text-align: center;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+.section-hero .grid .hero-heading{
+  font-size: 3.8rem;
+}
+
+  .section-why-choose{
+    & img{
+      width: 50%;
+    }
+
+ & .grid{
+      gap: 1.4rem;
+    }
+
+   & .text-align--right .why-choose--div{
+  align-items: start;
+  text-align: left;
+   }
+
+   & .text-align--left .why-choose--div{
+    align-items: start;
+    text-align: left;
+     }
+
+  }
+
+.section-contact-homepage .btn{
+  display: block;
+  text-align: center;
+}
+
+& .contact-title{
+  font-size: 2.4rem;
+}
+
+:is(.section-contact-homepage).container:first-child{
+  padding: 6.4rem 0 2.4rem 0;
+}
+
+}
+
+@media (width <= 998px) {
+  .section-hero {
+    height: auto;
+    padding-bottom: 5rem;
+    & .grid-two--cols {
+      grid-template-columns: 1fr;
+
+      & .section-hero--content {
+        order: 2;
+      }
+
+      & .section-hero--image {
+        order: 1;
+
+        & img {
+          text-align: center;
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  .section-about .about-div {
+    text-align: left;
+  }
+
+  footer .grid-four--cols {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    text-align: left;
+
+    & .footer-1--div {
+      grid-row: 2 / 3 ;
+      grid-column: 1 / -1 ;
+      margin-top: 6.4rem;
+    }
+  }
+}
+
+@media (width <= 1100px) {
+
+  body{
+    overflow-x: hidden;
+  }
+
+  :is(.section-courses,.section-blog) .grid-four--cols {
+     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  & .section-why-choose{
+
+   & .choose-left--div{
+    order: 2;
+   }
+
+   & .choose-right--div{
+    order: 3;
+   }
+
+    & .choose-center--div{
+      order: 1;
+
+      & figure::before{
+        height: 0;
+        width: 0;
+        background-color: transparent;
+        padding: 0;
+      }
+
+      & figure::after{
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        padding: 0;
+      }
+
+    }
+  }
+
+& .section-contact-homepage{
+  width: 35rem;
+  text-align: center;
+}
+
+}
